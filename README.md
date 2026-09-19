@@ -98,13 +98,6 @@ curved 4-element array, not a simulation error — the phase values for 40°
 and 50° required manual refinement beyond the pure analytical formula to
 achieve even this level of steering accuracy.
 
-**Why R=30cm was chosen over 40cm/50cm:** the same design was also evaluated
-at bend radii of 40 cm and 50 cm. Only R=30cm produced a properly matched
-antenna near the 2 GHz design frequency (S11 ≤ -10 dB). At R=40cm the match
-was marginal (-9.7 to -10.1 dB, borderline), and at R=50cm the match failed
-outright (-6.4 dB, with the resonant frequency drifting to 2.17 GHz) — most
-likely because the patch dimensions were tuned specifically for the R=30cm
-geometry and were not independently re-optimized for the larger radii.
 
 ## Repository Structure
 
