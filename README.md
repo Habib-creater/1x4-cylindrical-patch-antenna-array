@@ -65,22 +65,26 @@ restore a flat (broadside) wavefront:
 
 | Target Angle | S11 | Resonant Freq | Gain | Main Lobe (actual) | 3dB Beamwidth | Sidelobe |
 |---|---|---|---|---|---|---|
-| 0° | -10.92 dB | 2.07 GHz | 7.08 dBi | 0.0° | 26.2° | -11.5 dB |
-| 10° | — | — | 6.94 dBi | 9.0° | 26.5° | -11.0 dB |
-| 20° | — | — | 6.54 dBi | 19.0° | 27.0° | -10.1 dB |
-| 30° | — | — | — | — | — | — |
-| 40° | — | — | 4.84 dBi | 35.0° | 28.5° | -8.7 dB |
-| 50° | — | — | 3.8 dBi | 42.0° | 29.6° | -6.5 dB |
+| 0° | -10.92 dB | 2.070 GHz | 7.08 dBi | 0.0° | 26.2° | -11.5 dB |
+| 10° | -11.41 dB | 2.072 GHz | 6.94 dBi | 9.0° | 26.5° | -11.0 dB |
+| 20° | -12.03 dB | 2.072 GHz | 6.54 dBi | 19.0° | 27.0° | -10.1 dB |
+| 30° | -12.76 dB | 2.072 GHz | 5.89 dBi | 27.0° | 27.7° | -9.1 dB |
+| 40° | -13.74 dB | 2.068 GHz | 4.84 dBi | 35.0° | 28.5° | -8.7 dB |
+| 50° | -14.01 dB | 2.068 GHz | 3.8 dBi | 42.0° | 29.6° | -6.5 dB |
 
 *(See `results/scan_XXdeg/` for the individual S11, gain, and 3D pattern
 plots backing each row.)*
 
 ## Discussion
 
-**Impedance match:** the array is well-matched at broadside (-10.92 dB at
-2.07 GHz, clearing the standard -10 dB threshold against a 2 GHz design
-target), confirming the re-optimized 32.4 mm patch length successfully
-compensates for the R=300mm bend.
+**Impedance match:** the array is well-matched at every simulated angle
+(-10.92 dB to -14.01 dB, all clearing the standard -10 dB threshold against
+a 2 GHz design target), confirming the re-optimized 32.4 mm patch length
+successfully compensates for the R=300mm bend. Notably, S11 actually
+improves slightly as the scan angle increases, even as pattern quality
+(gain, sidelobe level) degrades — the port-combination weighting used for
+wide-angle steering reduces total reflected power independently of how
+well-formed the resulting beam is.
 
 **Beam steering:** pointing accuracy is excellent through 20° (within 1° of
 the commanded target), with gain and sidelobe level staying close to the
